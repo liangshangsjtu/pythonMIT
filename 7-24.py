@@ -41,3 +41,5 @@ result = result[0:-p]+'.'+result[-p:]
 # DEVIDED P POWERS OF 2 BY MOVING THE POINT IN BINARY FORM
 
 print('The bonary presentation of the demical '+str(x)+' is: '+str(result))
+
+# IN MANY CASES, USE NEWTON-RAPHSON METHOD TO FIND ROOTS OF A POLYNOMIAL IS EVEN MORE EFFICIENT THAN BISECTION SEARCH
