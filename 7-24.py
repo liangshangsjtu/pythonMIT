@@ -43,3 +43,16 @@ result = result[0:-p]+'.'+result[-p:]
 print('The bonary presentation of the demical '+str(x)+' is: '+str(result))
 
 # IN MANY CASES, USE NEWTON-RAPHSON METHOD TO FIND ROOTS OF A POLYNOMIAL IS EVEN MORE EFFICIENT THAN BISECTION SEARCH
+
+# CLASSICAL : TOWERS OF HANOI
+# USING RECURSION METHOD IS MUCH MORE EFFICIENT THAN ITERATION METHOD
+def printMove(fr, to):
+  print('move from '+str(fr)+' to '+str(to))
+def Towers(n,fr,to,spare):
+  if n==1:
+    printMove(fr, to)
+  else:
+    Towers(n-1,fr,spare,to)
+    Towers(1,fr,to,spare)
+    Towers(n-1,spare,to,fr)
+print(Towers(4,'P1','P2','P3'))
