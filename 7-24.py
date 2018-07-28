@@ -56,3 +56,19 @@ def Towers(n,fr,to,spare):
     Towers(1,fr,to,spare)
     Towers(n-1,spare,to,fr)
 print(Towers(4,'P1','P2','P3'))
+
+# IF A STRING IS A PALINDROME
+def isPalindrome(s):
+  def toChars(s):
+    s=s.lower()
+    ans=' '
+    for c in s:
+      if c in 'abcdefghijklmnopqrstuvwxyz':
+        ans = ans +c
+    return ans
+  def isPal(s):
+    if len<=1:
+      return True
+    else:
+      return s[0]==s[-1] and isPal(s[1:-1])
+  return isPal(toChars(s))
